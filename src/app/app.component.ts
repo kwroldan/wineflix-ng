@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {faPlay, faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import { wines, heroContent } from "../data"
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,6 @@ export class AppComponent {
   faPlay = faPlay
   faInfoCircle = faInfoCircle
   title = 'angular-template';
+  wines = wines;
+  heroContent = heroContent;
 }
