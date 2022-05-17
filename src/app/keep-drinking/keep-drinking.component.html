@@ -1,29 +1,13 @@
 <section class="category">
   <h2>Keep Drinking</h2>
   <ul>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
-    </li>
-    <li>
-      <app-wine-amount-consumed></app-wine-amount-consumed>
+    <li *ngFor="let wine of wines">
+      <div *ngIf="wine.progress" class="wine">
+        <img src="{{wine.imageUrl}}" alt="{{wine.label}}" />
+        <div class="amount-consumed">
+          <progress min="0" max="100" value="{{wine.progress}}"></progress>
+        </div>
+      </div>
     </li>
   </ul>
 </section>

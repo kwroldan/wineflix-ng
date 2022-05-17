@@ -1,15 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { wines, Wine } from "../../data";
 
 @Component({
   selector: 'app-keep-drinking',
   templateUrl: './keep-drinking.component.html',
   styleUrls: ['./keep-drinking.component.css']
 })
-export class KeepDrinkingComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class KeepDrinkingComponent {
+  wines: Wine[] = wines;
 }

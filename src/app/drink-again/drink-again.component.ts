@@ -1,14 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { wines } from "../../data";
-
-type Wine = {
-  id: number;
-  imageUrl: string;
-  isNew?: boolean;
-  label: string;
-  isFinished?: boolean;
-  progress?: number;
-}
+import { wines, Wine } from "../../data";
 
 @Component({
   selector: 'app-drink-again',
